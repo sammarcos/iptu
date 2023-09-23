@@ -22,7 +22,11 @@ window.addEventListener( "load", () => {
       M = $$( "[m]" ),
       P = $$( "[p]" ),
       Columns = $$( "[columns]" ),
-      Rows = $$( "[rows]" )
+      Rows = $$( "[rows]" ),
+
+      btn_menu = $( "appbar-options" ),
+      btn_x = $( "btn-x" ),
+      drawer = $( "drawer" )
    ;
 
 
@@ -69,5 +73,23 @@ window.addEventListener( "load", () => {
 
    Focus.forEach( img => img.addEventListener( "click", ev => {
    } ) );
+
+   btn_menu.addEventListener( "click", ev => {
+      if( drawer.getAttribute( "active" ) == "" ) {
+         drawer.removeAttribute( "active" );
+         drawer.style.visibility = "hidden";
+         drawer.style.width = "0";
+      } else {
+         drawer.setAttribute( "active", "" );
+         drawer.style.visibility = "visible";
+         drawer.style.width = "75vw";
+      }
+   } );
+
+   btn_x.addEventListener( "click", ev => {
+      drawer.removeAttribute( "active" );
+      drawer.style.visibility = "hidden";
+      drawer.style.width = "0";
+   } );
 
 } );

@@ -88,9 +88,35 @@ appbar-options {
    height: 100%;
    transform: scale(2);
    overflow: hidden;
-   visibility: hidden;
+   /* visibility: hidden; */
+   cursor: pointer;
+   user-select: none;
 }
 
+drawer {
+   display: grid;
+   width: 75vw;
+   height: 100vh;
+   visibility: hidden;
+   position: fixed;
+   top: 0; left: 0;
+   background: #212329;
+   box-shadow: #212329 0 0 0 10px;
+   color: #fff;
+   border-right: var(--amber) 5px dashed;
+   z-index: 9;
+}
+drawer > header {
+   display: grid;
+   grid-template-columns: .9fr .1fr;
+   height: 78px;
+   padding: 5px;
+}
+btn-x {
+   display: grid;
+   place-items: center;
+   font-size: 1.8rem;
+}
 
 main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
 video { display: block; width: 80%; margin: 0 auto; }
