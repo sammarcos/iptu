@@ -116,6 +116,7 @@ btn-x {
    display: grid;
    place-items: center;
    font-size: 1.8rem;
+   cursor: pointer;
 }
 
 main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
