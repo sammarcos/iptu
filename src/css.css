@@ -165,7 +165,8 @@ box > :first-child {
 }
 
 [card] {
-   display: block;
+   display: grid;
+   gap: 4vw;
 }
 [card]:where( header ) {
    display: grid;
@@ -187,12 +188,24 @@ box > :first-child {
    width: 100%; height: 100%;  
    display: grid;
    place-items: center;
+   font-weight: bold;
 }
 [card] > home {
    display: block;
    padding: 1vw;
    width: 100%;
    height: 100%;
+}
+header > titulo {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+   grid-template-columns: repeat(auto-fit, minmax(100px, max-content) );
+   justify-content: center;
+}
+header > titulo :first-child {
+   font-size: 1.5rem;
+   font-weight: bold;
+   padding: 20px 0;
 }
 
 b {
