@@ -69,6 +69,29 @@ appbar {
    color: white;
    box-shadow: #0005 0 2px 10px;
 }
+appbar-body {
+   display: grid;
+   grid-template-columns: .1fr .8fr .1fr;
+   height: 100%;
+}
+appbar-body > * {
+   width: 100%; height: 100%;
+}
+appbar-body > h1 {
+   display: grid;
+   place-items: center;
+   margin: 0;
+}
+appbar-options {
+   display: grid;
+   place-items: center;
+   height: 100%;
+   transform: scale(2);
+   overflow: hidden;
+   visibility: hidden;
+}
+
+
 main { margin: 0 auto; width: clamp( 100px, 100%, 1200px ); }
 video { display: block; width: 80%; margin: 0 auto; }
 page-header {
