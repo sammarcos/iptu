@@ -1,3 +1,3 @@
 # iptu
 
-[https://sammarcos.github.io/iptu/](link here)
+[link here](https://sammarcos.github.io/iptu/)
