@@ -33,7 +33,7 @@ window.addEventListener( "load", () => {
 
 
    NavLinks.forEach( link => link.addEventListener( "click", ev => {
-      window.open( link.getAttribute( "to" ), "_blank" );
+      window.open( link.getAttribute( "src" ), "_blank" );
    } ) );
 
 

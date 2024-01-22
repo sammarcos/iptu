@@ -1,14 +1,23 @@
 
 
+<style>
+   nav-link {
+      display: block;
+      color: #27f;
+      cursor: pointer;
+   }
+</style>
 <h2>n° processo</h2>
 
 1512838-22.2023 8.26 0477
 
 <br>
 
-<a href="
+<nav-link to="
 https://esaj.tjsp.jus.br/cpopg/show.do?processo.codigo=D9000JZ180000&processo.foro=477&processo.numero=1512838-22.2023.8.26.0477
-">Consulta de Processos do 1ºGrau</a>
+">
+   Consulta de Processos do 1ºGrau
+</nav-link>
 
 
 <h2>iptu</h2> <br>
@@ -16,13 +25,19 @@ https://esaj.tjsp.jus.br/cpopg/show.do?processo.codigo=D9000JZ180000&processo.fo
 203080060030000 - 1
 
 <br>
-<a href="https://www2.praiagrande.sp.gov.br/servicos-online">
+<nav-link to="https://www2.praiagrande.sp.gov.br/servicos-online">
    serviços online
-</a>
+</nav-link>
 
-<a href="
+<nav-link to="
 https://portal.cidadao.topdata-info.com.br/praiagrande/extrato.php
-">portal cidadão: iptu extrato</a>
+">
+   portal cidadão: iptu extrato
+</nav-link>
+
+<nav-link to="https://portal.cidadao.conam.com.br/praiagrande/2via_parcelamento.php">
+   pegar os próximos boletos
+</nav-link>
 
 <br>
 
@@ -40,3 +55,31 @@ https://portal.cidadao.topdata-info.com.br/praiagrande/extrato.php
 5838.73
 5305.11
 5810.65
+
+
+
+
+
+
+
+
+<script>
+   const 
+      $ = v => document.querySelector( v ),
+      $$ = v => document.querySelectorAll( v )
+   ;
+
+   addEventListener( "load", ev => {
+      let 
+         NavLinks = $$( "nav-link" )
+      ;
+
+      NavLinks.forEach( nl => {
+         nl.addEventListener( "click", ev => {
+            window.open( nl.getAttribute( "to" ), "" );
+         } );
+         console.log( nl.getAttribute( "to" ) );
+      } );
+
+   } );
+</script>
