@@ -203,6 +203,8 @@ window.addEventListener( "load", () => {
             `${ this.getAttribute( "comprovante" ) }`
          );
 
+         this.id = `parcela-${ this.getAttribute( "idn" ) }`;
+
          this.getAttribute( "status" ) != "1" ? 
             _( "" ) : this.setAttribute( "pago", "" );
             
