@@ -162,6 +162,7 @@ window.addEventListener( "load", () => {
             [boleto] > img { height: 100%; }
             [comprovante] { width: 150px; }
             [comprovante] > img { width: 100%; }
+            navlink { cursor: pointer; }
          </style>
          <h2></h2>
          <navlink src="" boleto>
