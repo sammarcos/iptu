@@ -1,0 +1,52 @@
+
+
+
+
+<card-item>
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+      body {
+         width: 100%;
+         margin: 0;
+      }
+      card-item {
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: .2fr .3fr .3fr;
+         gap: 15px;
+         place-items: center;
+         width: 100%;
+         background: #f5f5f5;
+         padding: 30px;
+         border-radius: 22px;
+         border: #0cd7 1px solid;
+         position: relative;
+         /* box-shadow: #0005 0 5px 10px; */
+      }
+      card-item::after {
+         content: "em aberto";
+         position: absolute;
+         top: 0; right: 0;
+         padding: 10px;
+         border-radius: 0 20px;
+         background: #456;
+         color: #fff;
+         font-weight: bold;
+      }
+      h2 { color: #0089c7; }
+      [boleto] { height: 150px; }
+      [boleto] > img { height: 100%; }
+      [comprovante] { width: 150px; }
+      [comprovante] > img { width: 100%; }
+      navlink { cursor: pointer; }
+   </style>
+   <h2>nome</h2>
+   <navlink src="" boleto>
+      <img src="./src/boleto.png" alt="">
+   </navlink>
+   <navlink src="" comprovante>
+      <img src="./src/comprovante.png" alt="">
+   </navlink>
+</card-item>

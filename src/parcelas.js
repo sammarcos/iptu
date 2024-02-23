@@ -54,8 +54,8 @@ let
             p7 = {
                id: "7",
                boleto: "p7 24-02-2024.pdf",
-               comprovante: "",
-               status: "",
+               comprovante: "p7 comprovante.jpg",
+               status: "1",
             },
             p8 = {
                id: "8",
