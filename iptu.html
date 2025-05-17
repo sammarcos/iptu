@@ -26,7 +26,7 @@ https://esaj.tjsp.jus.br/cpopg/show.do?processo.codigo=D9000JZ180000&processo.fo
 
 <br>
 <h2></h2>
-<nav-link to="https://portal.cidadao.conam.com.br/praiagrande/2via_parcelamento.php">
+<nav-link to="https://portal.cidadao.conam.com.br/praiagrande/2via_parcelamento.php" copy="203080060030000-1">
    <h2>pegar os boletos</h2>
 </nav-link>
 
@@ -82,6 +82,8 @@ https://portal.cidadao.topdata-info.com.br/praiagrande/extrato.php
    addEventListener( "load", ev => {
       let 
          NavLinks = $$( "nav-link" )
+         ,
+         Copys = $$( "[copy]" )
       ;
 
       NavLinks.forEach( nl => {
@@ -90,6 +92,10 @@ https://portal.cidadao.topdata-info.com.br/praiagrande/extrato.php
          } );
          console.log( nl.getAttribute( "to" ) );
       } );
+
+      Copys.forEach( elmnt => elmnt.addEventListener( "click", () => {
+         navigator.clipboard.writeText( elmnt.getAttribute( "copy" ) );
+      } ) );
 
    } );
 </script>
