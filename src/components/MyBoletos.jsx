@@ -1,5 +1,4 @@
 
-
 // src/components/MyBoletos.jsx
 import React from 'react';
 import BoletoCard from './BoletoCard.jsx'; // Importação relativa dentro da mesma pasta
